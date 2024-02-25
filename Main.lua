@@ -32,7 +32,7 @@ while true do
         io.write("Access Granted. Launching Main System")
         dots(3)
         loggedIn = true
-        Main()
+        mainFunc()
         break
     else
         clearScreen()
@@ -41,7 +41,7 @@ while true do
     end
 end
 
-function Main()
+function mainFunc()
     while loggedIn == true do
         clearScreen()
         print("Welcome. Please select an option below:")
