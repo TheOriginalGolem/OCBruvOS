@@ -32,6 +32,7 @@ while true do
         io.write("Access Granted. Launching Main System")
         dots(3)
         loggedIn = true
+        Main()
         break
     else
         clearScreen()
