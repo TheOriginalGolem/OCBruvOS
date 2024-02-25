@@ -14,7 +14,7 @@ function MaintenanceMenu()
         if selectedOption == "1" then
             doorControlMain()
         elseif selectedOption == "2" then
-            print("Exitting")
+            io.write("Exitting")
             dots(3)
             os.exit()
         elseif selectedOption == "3" then
