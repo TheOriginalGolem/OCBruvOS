@@ -24,23 +24,6 @@ function clearScreen()
     term.setCursor(1, 1)
 end
 
-setupSystem()
-
-while true do
-    if login() then
-        clearScreen()
-        io.write("Access Granted. Launching Main System")
-        dots(3)
-        loggedIn = true
-        mainFunc()
-        break
-    else
-        clearScreen()
-        print("Access Denied. Incorrect Password.")
-        os.sleep(1.5)
-    end
-end
-
 function mainFunc()
     while loggedIn == true do
         clearScreen()
@@ -75,3 +58,21 @@ function mainFunc()
         end
     end
 end
+
+setupSystem()
+
+while true do
+    if login() then
+        clearScreen()
+        io.write("Access Granted. Launching Main System")
+        dots(3)
+        loggedIn = true
+        mainFunc()
+        break
+    else
+        clearScreen()
+        print("Access Denied. Incorrect Password.")
+        os.sleep(1.5)
+    end
+end
+
