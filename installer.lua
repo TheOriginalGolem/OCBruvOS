@@ -1,11 +1,10 @@
 local shell = require("shell")
 local filesystem = require("filesystem")
 
-filesystem.remove("/home/Main.lua")
-filesystem.remove("/home/Password.lua")
-filesystem.remove("/home/DoorControl.lua")
-filesystem.remove("/home/Maintenance.lua")
-
+shell.execute("rm /home/Main.lua")
+shell.execute("rm /home/Password.lua")
+shell.execute("rm /home/DoorControl.lua")
+shell.execute("rm /home/Maintenance.lua")
 
 shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Main.lua /home/Main.lua")
 

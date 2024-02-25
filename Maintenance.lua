@@ -16,6 +16,7 @@ function MaintenanceMenu()
         elseif selectedOption == "2" then
             io.write("Exitting")
             dots(3)
+            clearScreen()
             os.exit()
         elseif selectedOption == "3" then
             io.write("Logging Out")
