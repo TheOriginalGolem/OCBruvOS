@@ -48,12 +48,12 @@ function Main()
         elseif selectedOption == "4" then
             io.write("Shutting Down")
             dots(3)
-            computer.shutdown()
+            clearScreen()
+            os.exit()
         elseif selectedOption == "0" then
             io.write("Logging Out")
             dots(3)
-            clearScreen()
-            os.exit()
+            loggedIn = false
         else
             print("Invalid option. Please select a valid option.")
             os.sleep(1.5)
