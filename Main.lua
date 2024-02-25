@@ -10,6 +10,14 @@ function read()
     return io.read()
 end
 
+function dots(dotNum)
+    for i = 1, dotNum, 1 do
+        os.sleep(0.3)
+        io.write(".")
+    end
+    os.sleep(0.6)
+end
+
 -- Function to clear the screen
 function clearScreen()
     term.clear()
@@ -30,14 +38,6 @@ while true do
         print("Access Denied. Incorrect Password.")
         os.sleep(1.5)
     end
-end
-
-function dots(dotNum)
-    for i = 1, dotNum, 1 do
-        os.sleep(0.3)
-        io.write(".")
-    end
-    os.sleep(0.6)
 end
 
 function Main()
