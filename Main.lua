@@ -6,6 +6,8 @@ local filesystem = require("filesystem")
 local DoorControl = require("DoorControl")
 local Password = require("Password")
 
+loggedIn = false
+
 function read()
     return io.read()
 end
@@ -24,7 +26,7 @@ function clearScreen()
     term.setCursor(1, 1)
 end
 
-function mainFunc()
+function Main()
     while loggedIn == true do
         clearScreen()
         print("Welcome. Please select an option below:")
@@ -67,7 +69,7 @@ while true do
         io.write("Access Granted. Launching Main System")
         dots(3)
         loggedIn = true
-        mainFunc()
+        Main()
         break
     else
         clearScreen()
