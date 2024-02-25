@@ -10,4 +10,9 @@ shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/
 
 shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/DoorControl.lua /home/DoorControl.lua")
 
-shell.execute("Main.lua")
+local startup = io.open("/home/.shrc", "w")
+startup:write("Main.lua")
+startup:close()
+
+shell.execute("rm /home/Installer.Lua")
+shell.execute("reboot")
