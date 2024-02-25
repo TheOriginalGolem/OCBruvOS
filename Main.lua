@@ -70,7 +70,6 @@ while true do
         dots(3)
         loggedIn = true
         Main()
-        break
     else
         clearScreen()
         print("Access Denied. Incorrect Password.")
