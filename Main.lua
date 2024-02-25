@@ -61,7 +61,13 @@ function Main()
     end
 end
 
-setupSystem()
+local file = io.open("passwordHash.txt", "r")
+    
+local contents = file:read("*a")
+
+if contents == "" then
+    setupSystem()
+end
 
 while true do
     if login() then
