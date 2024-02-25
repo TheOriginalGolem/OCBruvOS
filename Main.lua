@@ -47,7 +47,7 @@ function Main()
             print("Reactor Control WIP")
             os.sleep(1.5)
         elseif selectedOption == "4" then
-            Maintenance()
+            MaintenanceMenu()
         elseif selectedOption == "0" then
             io.write("Logging Out")
             dots(3)

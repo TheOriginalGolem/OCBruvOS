@@ -1,6 +1,6 @@
 local shell = require("shell")
 
-function Maintenance()
+function MaintenanceMenu()
     while true do
         clearScreen()
         print("Welcome. Please select an option below:")
