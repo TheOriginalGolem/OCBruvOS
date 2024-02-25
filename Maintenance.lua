@@ -26,7 +26,7 @@ function MaintenanceMenu()
 
         local selectedOption = read();
         if selectedOption == "1" then
-            doorControlMain()
+            changePassword()
         elseif selectedOption == "2" then
             io.write("Exitting")
             dots(3)
