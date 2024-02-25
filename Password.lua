@@ -29,6 +29,7 @@ function login()
     local correctPassword = file:read("*a")
     file:close()
     clearScreen()
+    print("###BruvOS Login###")
     io.write("Enter password: ")
     local enteredPassword = read()
     return enteredPassword == correctPassword
