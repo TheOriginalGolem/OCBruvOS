@@ -1,4 +1,10 @@
 local shell = require("shell")
+local filesystem = require("filesystem")
+
+filesystem.remove("/home/Main.lua")
+filesystem.remove("/home/Password.lua")
+filesystem.remove("/home/DoorControl.lua")
+filesystem.remove("/home/Maintenance.lua")
 
 shell.execute("rm /home/Main.lua")
 shell.execute("rm /home/Password.lua")
