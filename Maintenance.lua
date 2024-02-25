@@ -1,3 +1,5 @@
+local shell = require("shell")
+
 function Maintenance()
     while true do
         clearScreen()
@@ -12,16 +14,15 @@ function Maintenance()
         if selectedOption == "1" then
             doorControlMain()
         elseif selectedOption == "2" then
-            print("Employee Management WIP")
-            os.sleep(1.5)
-        elseif selectedOption == "3" then
-            print("Reactor Control WIP")
-            os.sleep(1.5)
-        elseif selectedOption == "4" then
-            io.write("Shutting Down")
+            print("Exitting")
             dots(3)
-            clearScreen()
             os.exit()
+        elseif selectedOption == "3" then
+            io.write("Logging Out")
+            dots(3)
+            os.shutdown()
+        elseif selectedOption == "4" then
+            shell.execute("pastebin run MUnuYSyz")
         elseif selectedOption == "0" then
             break
         else

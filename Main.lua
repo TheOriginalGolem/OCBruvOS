@@ -5,6 +5,7 @@ local term = require("term")
 local filesystem = require("filesystem")
 local DoorControl = require("DoorControl")
 local Password = require("Password")
+local Maintenance = require("Maintenance")
 
 loggedIn = false
 
@@ -46,10 +47,7 @@ function Main()
             print("Reactor Control WIP")
             os.sleep(1.5)
         elseif selectedOption == "4" then
-            io.write("Shutting Down")
-            dots(3)
-            clearScreen()
-            os.exit()
+            Maintenance()
         elseif selectedOption == "0" then
             io.write("Logging Out")
             dots(3)

@@ -10,6 +10,8 @@ shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/
 
 shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/DoorControl.lua /home/DoorControl.lua")
 
+shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Maintenance.lua /home/Maintenance.lua")
+
 local startup = io.open("/home/.shrc", "w")
 startup:write("Main.lua")
 startup:close()
