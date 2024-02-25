@@ -34,9 +34,9 @@ function MaintenanceMenu()
             clearScreen()
             os.exit()
         elseif selectedOption == "3" then
-            io.write("Logging Out")
+            io.write("Shutting Down")
             dots(3)
-            os.shutdown()
+            shell.execute("shutdown")
         elseif selectedOption == "4" then
             shell.execute("pastebin run MUnuYSyz")
         elseif selectedOption == "0" then
