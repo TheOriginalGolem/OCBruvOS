@@ -3,6 +3,7 @@ local shell = require("shell")
 function changePassword()
     local file = io.open("passwordHash.txt", "w")
 
+    clearScreen()
     print("Please enter a New Password:")
     if file then
         file:write(read())
