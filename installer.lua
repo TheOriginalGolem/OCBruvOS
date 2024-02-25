@@ -3,6 +3,7 @@ local shell = require("shell")
 shell.execute("rm /home/Main.lua")
 shell.execute("rm /home/Password.lua")
 shell.execute("rm /home/DoorControl.lua")
+shell.execute("rm /home/Maintenance.lua")
 
 shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Main.lua /home/Main.lua")
 
