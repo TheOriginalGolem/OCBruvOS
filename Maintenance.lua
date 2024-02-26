@@ -18,7 +18,7 @@ end
 function MaintenanceMenu()
     while true do
         clearScreen()
-        print("Welcome. Please select an option below:")
+        print("Maintenance Menu:")
         print("1. Change Password")
         print("2. Exit to OS")
         print("3. Shutdown")
