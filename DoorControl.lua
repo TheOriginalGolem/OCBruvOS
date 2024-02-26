@@ -13,7 +13,7 @@ end
 function displayDoors()
     -- Display saved entries
     print("Saved entries:")
-    
+
     local file, err = io.open(filePath, "r")
 
     if not file then
@@ -32,5 +32,5 @@ end
 
 -- Main function
 function doorControlMain()
-
+    displayDoors()
 end
