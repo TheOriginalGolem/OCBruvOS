@@ -6,6 +6,7 @@ local filesystem = require("filesystem")
 local DoorControl = require("DoorControl")
 local Password = require("Password")
 local Maintenance = require("Maintenance")
+local Employee = require("Employee")
 
 loggedIn = false
 
