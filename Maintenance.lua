@@ -38,7 +38,8 @@ function MaintenanceMenu()
             dots(3)
             shell.execute("shutdown")
         elseif selectedOption == "4" then
-            shell.execute("pastebin run MUnuYSyz")
+            shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/installer.lua /home/Installer.Lua")
+            shell.execute("/home/Installer.Lua")
         elseif selectedOption == "0" then
             break
         else
