@@ -32,11 +32,11 @@ function Main()
     while loggedIn == true do
         clearScreen()
         print("Welcome. Please select an option below:")
-        print("1. Door Control")
-        print("2. Employee Management")
-        print("3. Reactor Control")
-        print("4. System Maintenance")
-        print("0. Logout")
+        print("[1] Door Control")
+        print("[2] Employee Management")
+        print("[3] Reactor Control")
+        print("[4] System Maintenance")
+        print("[0] Logout")
 
         local selectedOption = read();
         if selectedOption == "1" then

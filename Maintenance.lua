@@ -19,11 +19,11 @@ function MaintenanceMenu()
     while true do
         clearScreen()
         print("Maintenance Menu:")
-        print("1. Change Password")
-        print("2. Exit to OS")
-        print("3. Shutdown")
-        print("4. Update System")
-        print("0. Exit")
+        print("[1] Change Password")
+        print("[2] Exit to OS")
+        print("[3] Shutdown")
+        print("[4] Update System")
+        print("[0] Exit")
 
         local selectedOption = read();
         if selectedOption == "1" then
