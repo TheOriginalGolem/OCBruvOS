@@ -7,7 +7,7 @@ local DoorControl = require("DoorControl")
 local Password = require("Password")
 local Maintenance = require("Maintenance")
 local Employee = require("Employee")
-local BruvAI = require("BruvAI")
+--local BruvAI = require("BruvAI")
 
 loggedIn = false
 
@@ -52,7 +52,7 @@ function Main()
         elseif selectedOption == "4" then
             MaintenanceMenu()
         elseif selectedOption == "5" then
-            shell.execute("BruvAI.lua")   
+            --shell.execute("BruvAI.lua")   
         elseif selectedOption == "0" then
             io.write("Logging Out")
             dots(3)
