@@ -1,4 +1,4 @@
-local inspect = require("inspect")
+--local inspect = require("inspect")
 local internet = require("internet")
  
 local handle = internet.request("https://www.google.com")
@@ -17,5 +17,5 @@ local mt = getmetatable(handle)
 local code, message, headers = mt.__index.response()
 print("code = "..tostring(code))
 print("message = "..tostring(message))
-print(inspect(headers))
+--print(inspect(headers))
 read()
