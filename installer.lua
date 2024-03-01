@@ -27,4 +27,6 @@ startup:write("Main.lua")
 startup:close()
 
 shell.execute("rm /home/Installer.Lua")
+print("\nPress enter to Reboot")
+read()
 shell.execute("reboot")
