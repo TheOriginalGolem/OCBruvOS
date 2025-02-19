@@ -1,4 +1,5 @@
 local shell = require("shell")
+local component = require("component")
 
 function changePassword()
     local file = io.open(".passwordHash", "w")
@@ -6,7 +7,7 @@ function changePassword()
     clearScreen()
     print("Please enter a New Password:")
     if file then
-        file:write(read())
+        file:write(component.data.sha256(read()))
         file:close()
         io.write("Password changed")
         dots(3)
