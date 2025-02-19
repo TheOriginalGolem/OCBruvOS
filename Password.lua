@@ -10,7 +10,7 @@ function setupSystem()
     
     local file = io.open(".passwordHash", "w")
     
-    local passwordHash = component.data.md5(read()).tostring()
+    local passwordHash = component.data.sha256(read())
 
     if file then
         -- Write the data to the file
@@ -33,6 +33,6 @@ function login()
     clearScreen()
     print("### BruvOS Login ###")
     io.write("Enter password: ")
-    local enteredPassword = component.data.md5(read()).tostring()
+    local enteredPassword = component.data.sha256(read())
     return enteredPassword == correctPassword
 end
