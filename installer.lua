@@ -20,7 +20,7 @@ shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruv
 
 shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Maintenance.lua /home/Maintenance.lua")
 
-shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/passwordHash.txt /home/passwordHash.txt")
+shell.execute("wget https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/.passwordHash /home/.passwordHash")
 
 local startup = io.open("/home/.shrc", "w")
 startup:write("Main.lua")

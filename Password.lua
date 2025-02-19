@@ -7,12 +7,14 @@ function setupSystem()
     clearScreen()
     print("Welcome to Bruv OS. Please enter a master password.")
     io.write("Password: ")
-    --local passwordHash = component.data.md5(read())
-    local file = io.open("passwordHash.txt", "w")
     
+    local file = io.open(".passwordHash", "w")
+    
+    local passwordHash = component.data.md5(read())
+
     if file then
         -- Write the data to the file
-        file:write(read())
+        file:write(passwordHash)
 
         -- Close the file
         file:close()
@@ -24,13 +26,13 @@ end
 
 -- Function to request and validate the password
 function login()
-    local file = io.open("passwordHash.txt", "r")
+    local file = io.open(".passwordHash", "r")
 
     local correctPassword = file:read("*a")
     file:close()
     clearScreen()
     print("### BruvOS Login ###")
     io.write("Enter password: ")
-    local enteredPassword = read()
+    local enteredPassword = component.data.md5(read())
     return enteredPassword == correctPassword
 end
