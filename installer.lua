@@ -7,6 +7,7 @@ shell.execute("rm -v /home/Password.lua")
 shell.execute("rm -v /home/Employee.lua")
 shell.execute("rm -v /home/DoorControl.lua")
 shell.execute("rm -v /home/Maintenance.lua")
+shell.execute("rm -v /home/Updates.lua")
 shell.execute("rm -v /home/Logo.txt")
 
 shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Main.lua /home/Main.lua")
@@ -20,6 +21,8 @@ shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruv
 shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/DoorControl.lua /home/DoorControl.lua")
 
 shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Maintenance.lua /home/Maintenance.lua")
+
+shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Updates.lua /home/Updates.lua")
 
 shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Logo.txt /home/Logo.txt")
 

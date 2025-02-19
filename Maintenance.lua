@@ -23,7 +23,7 @@ function MaintenanceMenu()
         print("[1] Change Password")
         print("[2] Exit to OS")
         print("[3] Shutdown")
-        print("[4] Update System")
+        print("[4] Updates")
         print("[0] Exit")
 
         local selectedOption = read();
@@ -39,8 +39,7 @@ function MaintenanceMenu()
             dots(3)
             shell.execute("shutdown")
         elseif selectedOption == "4" then
-            shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/installer.lua /home/Installer.Lua")
-            shell.execute("/home/Installer.Lua")
+            UpdateMenu()
         elseif selectedOption == "0" then
             break
         else
