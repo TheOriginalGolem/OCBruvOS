@@ -65,7 +65,7 @@ function Main()
     end
 end
 
-local file = io.open("passwordHash.txt", "r")
+local file = io.open(".passwordHash", "r")
     
 local contents = file:read("*a")
 
