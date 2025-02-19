@@ -29,9 +29,18 @@ function clearScreen()
     term.setCursor(1, 1)
 end
 
+function displayLogo()
+    local logofile = io.open("Logo.txt", "r")
+    local logotext = logofile:read("*a")
+    logofile:close()
+
+    print(logotext)
+end
+
 function Main()
     while loggedIn == true do
         clearScreen()
+        displayLogo()
         print("Welcome. Please select an option below:")
         print("[1] Door Control")
         print("[2] Employee Management")
