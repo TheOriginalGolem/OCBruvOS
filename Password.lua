@@ -10,11 +10,11 @@ function setupSystem()
     
     local file = io.open(".passwordHash", "w")
     
-    local passwordHash = component.data.md5(read())
+    local passwordHash = component.data.md5(read()).tostring()
 
     if file then
         -- Write the data to the file
-        file:write(passwordHash.tostring())
+        file:write(passwordHash)
 
         -- Close the file
         file:close()
