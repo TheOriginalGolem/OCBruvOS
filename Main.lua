@@ -52,7 +52,11 @@ function Main()
         elseif selectedOption == "4" then
             MaintenanceMenu()
         elseif selectedOption == "5" then
-            pcall(shell.execute("BruvAI.lua"))
+        if pcall(shell.execute("BruvAI.lua")) then
+
+          else
+            print("Error Occured")
+          end
         elseif selectedOption == "0" then
             io.write("Logging Out")
             dots(3)
