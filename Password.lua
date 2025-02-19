@@ -14,7 +14,7 @@ function setupSystem()
 
     if file then
         -- Write the data to the file
-        file:write(passwordHash)
+        file:write(passwordHash.tostring())
 
         -- Close the file
         file:close()
@@ -33,6 +33,6 @@ function login()
     clearScreen()
     print("### BruvOS Login ###")
     io.write("Enter password: ")
-    local enteredPassword = component.data.md5(read())
+    local enteredPassword = component.data.md5(read()).tostring()
     return enteredPassword == correctPassword
 end
