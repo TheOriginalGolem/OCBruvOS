@@ -24,9 +24,13 @@ function dots(dotNum)
 end
 
 -- Function to clear the screen
-function clearScreen()
+function clearScreen(Logo)
+    local showLogo = Logo or false
     term.clear()
     term.setCursor(1, 1)
+    if showLogo == true then
+        displayLogo()
+    end
 end
 
 function displayLogo()
@@ -39,8 +43,7 @@ end
 
 function Main()
     while loggedIn == true do
-        clearScreen()
-        displayLogo()
+        clearScreen(true)
         print("Welcome. Please select an option below:")
         print("[1] Door Control")
         print("[2] Employee Management")
