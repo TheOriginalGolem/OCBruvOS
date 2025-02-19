@@ -1,7 +1,7 @@
 local shell = require("shell")
 
 function changePassword()
-    local file = io.open("passwordHash.txt", "w")
+    local file = io.open(".passwordHash", "w")
 
     clearScreen()
     print("Please enter a New Password:")
