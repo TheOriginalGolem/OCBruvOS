@@ -1,5 +1,6 @@
 local shell = require("shell")
 local component = require("component")
+local updates = require("Updates")
 
 function changePassword()
     local file = io.open(".passwordHash", "w")
@@ -39,7 +40,7 @@ function MaintenanceMenu()
             dots(3)
             shell.execute("shutdown")
         elseif selectedOption == "4" then
-            UpdateMenu()
+            updates.UpdateMenu()
         elseif selectedOption == "0" then
             break
         else
