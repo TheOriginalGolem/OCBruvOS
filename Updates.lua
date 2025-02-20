@@ -34,7 +34,7 @@ function updateChecker(quiet)
         end
         return false
     else
-        if quiet == true then
+        if quiet == false then
             print("\nNo Update Found")
             os.sleep(3)
         end
