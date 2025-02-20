@@ -23,7 +23,7 @@ function dots(dotNum)
     os.sleep(0.6)
 end
 
--- Function to clear the screen
+
 function clearScreen()
     term.clear()
     term.setCursor(1, 1)
@@ -59,8 +59,8 @@ function Main()
             print("Reactor Control WIP")
             os.sleep(1.5)
         elseif selectedOption == "4" then
-            --MaintenanceMenu()
-            UpdateMenu()
+            MaintenanceMenu()
+            --UpdateMenu()
         elseif selectedOption == "5" then
             --shell.execute("BruvAI.lua")   
             aiTest()
