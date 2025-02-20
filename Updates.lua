@@ -15,18 +15,30 @@ function currentVersion()
     return currentVersion
 end
 
-function updateChecker()
+function updateChecker(quiet)
     shell.execute("wget -fq https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Changelog.txt /home/NewChangelog.txt")
     local file = io.open("NewChangelog.txt", "r")
     local newVersion = file:read(4)
     file:close()
     filesystem.remove("/home/NewChangelog.txt")
-    print("Checking for Updates")
-    dots(3)
 
+    if quiet == false then
+        io.write("Checking for Updates")
+        dots(3)
+    end
+    
     if currentVersion() == newVersion then
+        if quiet == false then
+            print("\nUpdate Found!")
+            os.sleep(3)
+        end
         return false
     else
+        if quiet == true then
+            print("\nNo Update Found")
+            os.sleep(3)
+        end
+        updateAvailable = true
         return true
     end
 
@@ -47,15 +59,23 @@ function UpdateMenu()
     while true do
         clearScreen()
         print("Update Menu:")
-        print("[1] Check for Updates")
+        if updateAvailable == false then
+            print("[1] Check for Updates")
+        elseif updateAvailable == true then
+            print("[1] Update Available - Update Now")
+        end
+
         print("[2] Force System Update")
         print("[3] View Changelog")
         print("[0] Exit")
 
         local selectedOption = read();
         if selectedOption == "1" then
-            updateChecker()
-            os.sleep(1.5)
+            if updateAvailable == false then
+                updateChecker()
+            elseif updateAvailable == true then
+                systemUpdate()
+            end
         elseif selectedOption == "2" then
             systemUpdate()
         elseif selectedOption == "3" then
