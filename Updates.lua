@@ -8,12 +8,27 @@ end
 
 updateAvailable = false
 
-function updateChecker()
+function currentVersion()
     local file = io.open("Changelog.txt", "r")
-
     local currentVersion = file:read(4)
     file:close()
-    print(currentVersion)
+    return currentVersion
+end
+
+function updateChecker()
+    shell.execute("wget -fq https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Changelog.txt /home/NewChangelog.txt")
+    local file = io.open("NewChangelog.txt", "r")
+    local newVersion = file:read(4)
+    file:close()
+    filesystem.remove("/home/NewChangelog.txt")
+    print("Checking for Updates")
+    dots(3)
+
+    if currentVersion() == newVersion then
+        return false
+    else
+        return true
+    end
 
 end
 
