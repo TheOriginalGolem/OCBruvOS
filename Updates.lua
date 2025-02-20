@@ -1,3 +1,5 @@
+local shell = require("shell")
+
 function systemUpdate()
     shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/installer.lua /home/Installer.Lua")
     shell.execute("/home/Installer.Lua")

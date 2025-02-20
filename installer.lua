@@ -1,3 +1,6 @@
+local shell = require("shell")
+local filesystem = require("filesystem")
+
 shell.execute("rm -v /home/Main.lua")
 shell.execute("rm -v /home/BruvAI.lua")
 shell.execute("rm -v /home/Password.lua")

@@ -1,3 +1,6 @@
+local component = require("component")
+local filesystem = require("filesystem")
+
 loggedIn = true
 
 function setupSystem()
