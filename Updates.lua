@@ -15,13 +15,13 @@ function currentVersion()
     return currentVersion
 end
 
-function updateChecker(quiet)
-    
+function updateChecker(isQuiet)
+    local quiet = isQuiet or false
     if quiet == false then
         io.write("Checking for Updates")
         dots(3)
     end
-    
+
     shell.execute("wget -fq https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/Changelog.txt /home/NewChangelog.txt")
     local file = io.open("NewChangelog.txt", "r")
     local newVersion = file:read(4)
