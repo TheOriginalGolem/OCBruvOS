@@ -59,7 +59,8 @@ function Main()
             print("Reactor Control WIP")
             os.sleep(1.5)
         elseif selectedOption == "4" then
-            MaintenanceMenu()
+            --MaintenanceMenu()
+            UpdateMenu()
         elseif selectedOption == "5" then
             --shell.execute("BruvAI.lua")   
             aiTest()

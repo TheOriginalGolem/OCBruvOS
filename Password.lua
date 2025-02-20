@@ -13,10 +13,8 @@ function setupSystem()
     local passwordHash = component.data.sha256(read())
 
     if file then
-        -- Write the data to the file
         file:write(passwordHash)
 
-        -- Close the file
         file:close()
         print("Data written to the file successfully.")
     else
@@ -24,7 +22,6 @@ function setupSystem()
     end
 end
 
--- Function to request and validate the password
 function login()
     local file = io.open(".passwordHash", "r")
 
