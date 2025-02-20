@@ -30,13 +30,13 @@ function updateChecker(isQuiet)
     
     if currentVersion() == newVersion then
         if quiet == false then
-            print("\nUpdate Found!")
+            print("\nNo Update Found")
             os.sleep(3)
         end
         return false
     else
         if quiet == false then
-            print("\nNo Update Found")
+            print("\nUpdate Found!")
             os.sleep(3)
         end
         updateAvailable = true
