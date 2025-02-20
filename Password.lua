@@ -22,6 +22,21 @@ function setupSystem()
     end
 end
 
+function changePassword()
+    local file = io.open(".passwordHash", "w")
+
+    clearScreen()
+    print("Please enter a New Password:")
+    if file then
+        file:write(component.data.sha256(read()))
+        file:close()
+        io.write("Password changed")
+        dots(3)
+    else
+        print("Failed to change password")
+    end
+end
+
 function login()
     local file = io.open(".passwordHash", "r")
 
