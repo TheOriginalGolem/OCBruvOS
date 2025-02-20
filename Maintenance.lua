@@ -1,6 +1,3 @@
-local shell = require("shell")
-local component = require("component")
-
 function changePassword()
     local file = io.open(".passwordHash", "w")
 
