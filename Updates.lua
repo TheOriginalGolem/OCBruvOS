@@ -1,8 +1,20 @@
 local shell = require("shell")
+local filesystem = require("filesystem")
 
 function systemUpdate()
     shell.execute("wget -f https://raw.githubusercontent.com/TheOriginalGolem/OCBruvOS/main/installer.lua /home/Installer.Lua")
     shell.execute("/home/Installer.Lua")
+end
+
+updateAvailable = false
+
+function updateChecker()
+    local file = io.open("Changelog.txt", "r")
+
+    local currentVersion = file:read("4")
+    file:close()
+    print(currentVersion)
+
 end
 
 
@@ -16,7 +28,7 @@ function UpdateMenu()
 
         local selectedOption = read();
         if selectedOption == "1" then
-            print("WIP")
+            updateChecker()
             os.sleep(1.5)
         elseif selectedOption == "2" then
             systemUpdate()
