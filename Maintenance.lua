@@ -8,6 +8,8 @@ function MaintenanceMenu()
         print("[2] Exit to OS")
         print("[3] Shutdown")
         print("[4] Updates")
+        print("[5] Manage Users")
+        print("[6] Manage Trust Level")
         print("[0] Exit")
 
         local selectedOption = read();

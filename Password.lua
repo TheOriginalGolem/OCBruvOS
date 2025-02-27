@@ -5,7 +5,7 @@ loggedIn = true
 
 function setupSystem()
     clearScreen()
-    print("Welcome to Bruv OS. Please enter a master password.")
+    print("Welcome to Bruv OS. Please enter a Admin password.")
     io.write("Password: ")
     
     local file = io.open(".passwordHash", "w")

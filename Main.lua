@@ -8,10 +8,14 @@ local DoorControl = require("DoorControl")
 local Password = require("Password")
 local Maintenance = require("Maintenance")
 local Updates = require("Updates")
-local Employee = require("Employee")
+local Users = require("Users")
 local BruvAI = require("BruvAI")
 
 loggedIn = false
+
+INFO = 0
+WARN = 1
+ERROR = 2
 
 function read()
     return io.read()
@@ -25,10 +29,13 @@ function dots(dotNum)
     os.sleep(0.6)
 end
 
-
 function clearScreen()
     term.clear()
     term.setCursor(1, 1)
+end
+
+function log()  
+    
 end
 
 function displayLogo()

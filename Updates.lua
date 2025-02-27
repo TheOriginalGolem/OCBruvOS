@@ -18,6 +18,7 @@ end
 function updateChecker(isQuiet)
     local quiet = isQuiet or false
     if quiet == false then
+        clearScreen()
         io.write("Checking for Updates")
         dots(3)
     end
